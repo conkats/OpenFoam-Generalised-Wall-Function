@@ -1,0 +1,3 @@
+SOURCE += nutkGWFFvPatchScalarField.C
+SOURCE += epsilonGWFFvPatchScalarField.C
+LIB = $(FOAM_USER_LIBBIN)/libmynutkGWF
