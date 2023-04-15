@@ -2,7 +2,12 @@
 Implementation of the Generalised Wall Function by Popovac
 
 -Usage:
-Include the following in the controldict
+-Compile the GAWF using ./Allwmake to add the library in the path
+-Include the following:
+    In Controldict: libs ("libmynutkGWF.so");
+    For the wall patches definition in the dictionaries of
+    0/nut: type nutkGWF;
+    0/epsilon: type            epsilonGWF;
 
 References
 --------------------------------------------
