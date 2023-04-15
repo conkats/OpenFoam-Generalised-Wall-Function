@@ -28,7 +28,7 @@ boundaryField
 
     airfoil
     {
-        type            nutkWallFunction;//nutkGWF;
+        type            nutkGWF;
         value           $internalField;
     }
 
