@@ -253,7 +253,7 @@ tmp<scalarField> nutkGWFFvPatchScalarField::nut() const
         scalar kstar = kappa_*Cmu25;
         scalar uk = Cmu25*sqrt(k[celli]);
         //scalar utau = sqrt(nuw[facei]*mag(dUtdn[facei]))+1e-12;
-        scalar Ustar = mag(Ut[facei]) /uk;
+        scalar Ustar = (mag(Ut[facei])+1e-12) /uk;
 
         scalar Custar = Cu[facei] * nuw[facei] / (sqr(uk)*sqrt(k[celli]));
         scalar psi = 1 - Custar * yPlus / (kstar * Ustar );
