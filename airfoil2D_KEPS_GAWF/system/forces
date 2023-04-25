@@ -1,0 +1,30 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+
+forces
+{
+    patches         (airfoil);
+    CofR            (0 0 0);  // Axle midpoint on ground
+    libs            ("libforces.so");
+    writeControl    timeStep;
+    timeInterval    5;
+    type            forces;
+    pName           p;
+    UName           U;
+    rho             rhoInf;      // Indicates incompressible
+    rhoInf          1;           // Redundant for incompressible
+    name            forces;
+    //log             yes;
+    //format          ascii;
+}
+
+
+
+
+
+// ************************************************************************* //
