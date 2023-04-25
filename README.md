@@ -1,5 +1,6 @@
 # OpenFoam-Generalised-Wall-Function
-Implementation of the Generalised Wall Function by Popovac
+Implementation of the Generalised Wall Function by Popovac in OpenFoam v9
+
 
 -Usage:
 Include the following in the controldict
