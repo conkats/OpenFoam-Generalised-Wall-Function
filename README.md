@@ -1,9 +1,23 @@
 # OpenFoam-Generalised-Wall-Function
 Implementation of the Generalised Wall Function by Popovac in OpenFoam v9
 
+##Test case 2-D NACA Airfoil
 
--Usage:
-Include the following in the controldict
+##Usage:
+Execute the make in the popovacGWallFunction directory
+
+./Allwmake
+
+Include the following in the "controlDict" to load it:
+
+libs ("libmynutkGWF.so");
+
+Set the following in 0/epsilon and 0/nut for wall condition type:
+type            epsilonGWF;
+
+type            nutkGWF;
+
+Further validation, verification and work in progress...
 
 References
 --------------------------------------------
