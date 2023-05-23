@@ -8,7 +8,7 @@
 
 forces
 {
-    patches         (airfoil);
+    patches         (walls);
     CofR            (0 0 0);  // Axle midpoint on ground
     libs            ("libforces.so");
     writeControl    timeStep;

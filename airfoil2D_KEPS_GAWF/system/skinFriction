@@ -14,7 +14,7 @@ forces
     liftDir         (0 1 0);  
     dragDir         (-1 0 0);
     pitchAxis       (0 0 0);
-    patches         (airfoil);
+    patches         (walls);
     magUInf         69.4;
     lRef            2.4;
     Aref            2.4;
