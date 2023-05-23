@@ -21,13 +21,21 @@ internalField   uniform 1.0127;
 boundaryField
 {
 
-    farfield
+    inlet
     {
         type            fixedValue;
         value           $internalField;
     }
 
-    airfoil
+    outlet
+    {
+       // type            zeroGradient;
+      type               fixedValue;
+      value              $internalField;
+
+    }
+
+    walls
     {
         type            epsilonGWF;
         value           $internalField;

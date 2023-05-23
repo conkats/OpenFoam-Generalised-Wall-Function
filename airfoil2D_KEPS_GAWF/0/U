@@ -15,20 +15,25 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform (30.222315557 7.4625 0);
+internalField   uniform (25.75 3.62 0);
 
 boundaryField
 {
-    farfield
+    inlet
     {
-        type            freestream;
-        freestreamValue  $internalField;//uniform (30.222315557 7.4625 0); //13.87 degree angle
+        type            freestreamVelocity;
+        freestreamValue $internalField;
     }
 
-
-    airfoil
+    outlet
     {
-        //type           noSlip;
+        type            freestreamVelocity;
+        freestreamValue $internalField;
+    }
+
+    walls
+    {
+        //    type           noSlip;
 	    type		fixedValue;
         value		uniform (0 0 0);
     }

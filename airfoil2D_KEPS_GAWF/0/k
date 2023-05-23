@@ -16,17 +16,26 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 1.033; 
+internalField   uniform 1.033; // 1.08e-3 = 1.125*(69.4)^2/5e6 // 11=3.9% 18.1=5%;
 boundaryField
 {
 
-    farfield
+    inlet
     {
         type            fixedValue;
         value           $internalField;
     }
-    
-    airfoil
+
+    outlet
+    {
+        //type            zeroGradient;
+       type              fixedValue;
+       value             $internalField;
+        
+
+    }
+
+    walls
     {
         type            kqRWallFunction;
         value           $internalField;

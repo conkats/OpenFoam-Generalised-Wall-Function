@@ -9,7 +9,6 @@ FoamFile
 {
     format      ascii;
     class       volScalarField;
-    location    "0";
     object      nut;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -20,16 +19,22 @@ internalField   uniform 0;
 
 boundaryField
 {
-    farfield
+    inlet
     {
         type            freestream;
-        freestreamValue uniform 0.01;
+        freestreamValue uniform 0.14;
     }
 
-    airfoil
+    outlet
     {
-        type            nutkGWF;//nutkWallFunction;//
-        value           $internalField;
+        type            freestream;
+        freestreamValue uniform 0.14;
+    }
+
+    walls
+    {
+        type            nutkGWF;
+        value           uniform 0;
     }
 
     frontAndBack

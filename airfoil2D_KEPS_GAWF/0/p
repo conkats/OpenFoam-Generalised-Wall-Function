@@ -19,14 +19,19 @@ internalField   uniform 0;
 
 boundaryField
 {
-    farfield
+    inlet
     {
         type            freestreamPressure;
         freestreamValue $internalField;
-
     }
 
-    airfoil
+    outlet
+    {
+        type            freestreamPressure;
+        freestreamValue $internalField;
+    }
+
+    walls
     {
         type            zeroGradient;
     }
