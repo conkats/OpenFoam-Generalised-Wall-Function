@@ -9,33 +9,42 @@ FoamFile
 {
     format      ascii;
     class       polyBoundaryMesh;
-    location    "constant/polyMesh";
     object      boundary;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-3
+4
 (
-    frontAndBack
-    {
-        type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          64192;
-        startFace       63802;
-    }
-    farfield
-    {
-        type            patch;
-        nFaces          608;
-        startFace       127994;
-    }
-    airfoil
-    {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          172;
-        startFace       128602;
-    }
+inlet
+{
+    type patch;
+    physicalType inlet;
+    nFaces 134;
+    startFace 21254;
+}
+
+outlet
+{
+    type patch;
+    physicalType outlet;
+    nFaces 160;
+    startFace 21388;
+}
+
+walls
+{
+    type wall;
+    physicalType wall;
+    nFaces 78;
+    startFace 21548;
+}
+
+frontAndBack
+{
+    type empty;
+    physicalType empty;
+    nFaces 21440;
+    startFace 21626;
+}
 )
 
 // ************************************************************************* //
