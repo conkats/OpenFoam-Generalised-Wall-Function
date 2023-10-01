@@ -29,3 +29,5 @@ Bounded Flows”. PhD thesis. Delft, Netherlands: Technische Universiteit Delft,
 for turbulent convective heat transfer”. In: 9th UK National Heat Transfer Conference,
 Manchester, UK (2005) (cited on pages i, 2).
 
+(3)OpenFOAM’s programming tutorials: https://github.com/UnnamedMoose/BasicOpenFOAMProgrammingTutorials
+
